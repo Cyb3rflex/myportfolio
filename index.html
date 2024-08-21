@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsiveness/destop-tablet.css">
+    <link rel="stylesheet" href="responsiveness/mobile.css">
+    <script
+      src="https://kit.fontawesome.com/d10f242f72.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    </head>
+  <body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/log.png" class="logo" alt="Logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
+      </nav>
+      <div class="header2">
+        <div class="header-text">
+          <h1>Hi, I'm <span>Abdulmuheez</span> Qazeem</h1>
+          <h3>I'm a <span id="text_typed"></span> </h3>
+          <p class="year">A Software programmer skilled in HTML5, CSS3, Bootstrap, JavaScript
+            for web development. Also Available for Freelancing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function $(sel) {
+      return document.querySelector(sel);
+    }
+    function $A(sels){
+      return document.querySelectorAll(sels);
+    }
+    function openmenu() {
+      $('#sidemenu').style.width = '100%';
+    }
+    window.addEventListener("load", ()=>{
+      $A("#sidemenu li a").forEach((elem)=>{
+        elem.addEventListener("click", ()=>{
+          closemenu();
+        })
+      })
+    })
+    function closemenu() {
+      $('#sidemenu').style.width = '0';
+    }
+  </script>
+
+
+    <!-- <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <div class="logo">
+            <li><span class="logo-li">A</span>BDULMUHEEZ</li>
+          </div>
+          <ul id="sidemenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
+        </nav>
+        <div class="header2">
+          <div class="header-text">
+            <h1>Hi, I'm <span>Abdulmuheez</span> Qazeem</h1>
+            <h3>I'm a <span class="text"></span> </h3>
+              <p class="year">A Software programmer skilled in Html5, Css3, Bootstrap, Javascript
+                for web development. Also Available for Freelancing.
+              </p>
+          </div>
+          <div class="mage">
+            <img src="images/background.png" class="logo2" />
+          </div> 
+        </div>
+      </div>
+    </div> -->
+    <!-- ---------------About------------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="box">
+            <div class="imgBx">
+                <img src="images/mage1.jpg" alt="">
+            </div>
+            <ul class="social-icon">
+              <li><a href="https://wa.me/2349160933706"><i class="fa-brands fa-whatsapp"></i></a></li>
+              <li><a href="https://github.com/Cyb3rflex
+              "><i class="fa-brands fa-github"></i></a></li>
+              <li><a href="https://x.com/cyb3rflex?t=OvvM4EKgmVXJ9z8daEpZnA&S=09"><i class="fa-brands fa-x-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/cyb3rflex"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+            <div class="details">
+                <h2>CYB3RFLEX <br><span>Frontend Dev</span></h2>
+            </div>
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="me">
+              I'm a Web Developer, I have a passion for creating beautiful and 
+              functional websites. I have a strong background in HTML, CSS, and
+              JavaScript, and I'm always looking to learn new technologies and
+              techniques to improve my skills. I'm a team player and I enjoy
+              working collaboratively to create high-quality websites that meet
+              the needs of my clients. I'm also a problem solver and I'm
+              always looking for ways to improve the user experience of my
+              websites. I'm excited to use my skills to create websites that
+              will make a positive impact on the world.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><i class="fa-brands fa-html5 cod"></i><span class="con"> HTML5</span>
+                <P class="year">2+ Years Experience</P>
+                </li>
+                <li><i class="fa-brands fa-css3 cod"></i><span class="con"> CSS3</span>
+                <p class="year">2+ Years Experience</p>
+                </li>
+                <li><i class="fa-brands fa-bootstrap cod"></i><span class="con"> BOOTSTRAP</span> 
+                <p class="year">1 Year Experience</p>
+                </li>
+                <li><i class="fa-brands fa-js cod"></i> <span class="con"> JAVASCRIPT</span>
+                <p class="year">1 Year Experience</p>
+                </li>
+                <li><i class="fa-solid fa-file-code cod"></i><span class="con"> TAILWINDCSS</span> 
+                <p class="year">Basic Knowledge</p>
+                </li>
+                <li><i class="fa-brands fa-python cod"></i><span class="con"> PYTHON</span> 
+                <p class="year">Basic Knowledge</p>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+               <h4>2020 - 2021
+                INTERN FRONT-END WEB DEVELOPER(MALHUB TECHNOLOGIES)
+               </h4>
+               <p>Task</p>
+               <li>Built responsive user interface for clients using HTML, CSS and JAVASCRIPT</li>
+               <li>Integrated Frameworks Like Bootstrap, Tailwindcss into projects for more responsive user interfaces</li>
+               <li>Processing and filtering of dirty input from user with advanced validation before storing to database</li>
+               <li>Debugging of faulty codes.</li><br>
+               <h4>2020 - 2021
+                INTERN FRONT-END WEB DEVELOPER(MALHUB TECHNOLOGIES)
+               </h4>
+               <p>Task</p>
+               <li>Web Design and Development</li>
+               <li>Front-end Web Development(HTML, CSS, and JAVASCRIPT)</li>
+               <li>Creating responsive webpages to scale nicely on all screens using CSS.</li>
+              </ul>
+            </div> 
+            <div class="tab-contents" id="education">
+              <ul>
+                <h4>2024 till date
+                    Bachelor's Degree(BSc.) in Computer Science
+                </h4>
+                Currently pursuing a degree in Computer Science in the university of ilorin(UNILORIN)
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------Services--------------------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">Services</h1>
+        <p class="ser">I am a software programmer. I am expert in Front-end Development,<br>
+           usage of frameworks, UI/UX Designing, etc.</p>
+        </p>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+                We specialize in custom web design with
+                responsive layouts, user-friendly interfaces,
+                impactful landing pages, and effective redesigns 
+                to enhance your online presence.
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>
+              We design Apps with responsive layouts, user-friendly interfaces
+              to enhance your online presence.
+              We design to the taste of our users.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h2>Maintenance</h2>
+            <p>
+                We offer comprehensive web development to 
+                maintenance services, ensuring website security,
+                performance optimization, updates, and troubleshooting to 
+                keep your online presence running smoothly and efficiently
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------Portfolio------------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <div class="sub-title">RECENT PROJECTS</div>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" />
+            <div class="layer">
+              <h3>PURE CSS ANIMATIONS</h3>
+              <p>
+                The app connects you to the talented people around the world.
+                Download it fron play store
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>
+                The app connects you to the talented people around the world.
+                Download it fron play store
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                The app connects you to the talented people around the world.
+                Download it fron play store
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+    <!-- --------------Contact------------------ -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>I would love to hear from you soon. <br>
+             If you want to hire me for your project just leave a message here <br>
+             by filling the contact form or use my other contact methods (Email, Whatsapp).
+            </p>
+            <p><i class="fa-solid fa-envelope"></i><span class="con">Email:</span> abdulmuheezq@gmail.com</p>
+            <p><i class="fa-solid fa-mobile"></i><span class="con">Call:</span> +2349160933706</p>
+            <div class="social-icons">
+              <a href="https://wa.me/2349160933706"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://github.com/Cyb3rflex
+              "><i class="fa-brands fa-github"></i></a>
+              <a href="https://x.com/cyb3rflex?t=OvvM4EKgmVXJ9z8daEpZnA&S=09"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/cyb3rflex"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              
+            </div>
+            <a href="images/mycv.png" class="btn btn2">Download CV</a>
+          </div>
+          <!-- <div class="bowl">
+            <div class="water">
+                <img src="images/ima.png" class="fish">
+            </div>
+          </div> -->
+        <div class="shadow"></div>
+        <div class="form-group">
+          <h3>TEXT TO SPEECH</h3>
+          <input id="input" type="text" class="form-control"></input>
+          <button class="btn-primary" onclick="speak()">Speak</button>
+        </div>
+
+
+        <script>
+          function speak() {
+            const input = document.getElementById('input');
+            const text = input.value;
+            const utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+          }
+        </script>
+          <!-- <div class="contact-right">
+            <form id="contactForm">
+              <label for="name"></label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+              <label for="email"></label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <label for="message"></label>
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div> -->
+      <div class="copyright">
+        <p>
+          Copyright @ 2024 Abdulmuheez. | <i class="fa-solid fa-heart"></i> Created
+          and Developed by Abdulmuheez
+        </p>
+      </div>
+    </div>
+
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          const formData = new FormData(this);
+
+          fetch('/submit-form', {
+              method: 'POST',
+              body: JSON.stringify(Object.fromEntries(formData)),
+              headers: { 'Content-Type': 'application/json' }
+          })
+          .then(response => response.text())
+          .then(data => alert(data))
+          .catch(error => console.error('Error:', error));
+      });
+  </script>
+    <script>
+      var typed= new Typed("#text_typed", {
+        strings: ["Frontend Developer", "Freelancer", "Code Manipulator", "Web Developer", "Code Wizard"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop:true
+      })
+    </script>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents") ;
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <!-- <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbx7HuGSqTBabPF2rrK_TLq67cIh0AawZr4KL_Xn7zyQ03mkTRTv4RW9Q1vgxp5WKie14A/exec'
+      const form = document.form['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error', error.message))
+      })
+      </script> -->
+  </body>
+</html>

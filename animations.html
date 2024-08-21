@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURE CSS ANIMATIONS</title>
+    <link rel="stylesheet" href="ani.css">
+    <script
+      src="https://kit.fontawesome.com/d10f242f72.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+      <div class="main-container">
+        <nav>
+          <div class="brand">
+            <li><span class="logo-li">C</span>YB3RFLEX</li>
+          </div>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
+        </nav>
+       <div class="bottom-sec">
+        <div class="bottom-left">
+            <h1>Experince the night sky</h1>
+            <h3>Unveil the beauty of the moon and stars with our interactive design</h3>
+            <p>Experience the transition from darkness to light as the moon reveals its luminous beauty. Hover over the moon to watch it glow and stars appear, bringing the night sky to life.</p>
+        </div>
+       <div class="bottom-right">
+         <img src="images/main-img.jpg" alt="" class="main01" id="Main01"/>
+         <img src="images/main2-img.png" alt="" class="main02" id="Main02"/>
+       </div>
+       </div>
+    </div>
+
+
+<!--     
+    <div class="men">
+      <a href="https://app.spline.design/file/999700e2-df6d-4afc-8150-85b06fd64008"></a>
+    </div> -->
+
+
+    <!-- JQUERY FOR THE NAVBAR -->
+    <script>
+      function $(sel) {
+        return document.querySelector(sel);
+      }
+      function $A(sels){
+        return document.querySelectorAll(sels);
+      }
+      function openmenu() {
+        $('#sidemenu').style.width = '100%';
+      }
+      window.addEventListener("load", ()=>{
+        $A("#sidemenu li a").forEach((elem)=>{
+          elem.addEventListener("click", ()=>{
+            closemenu();
+          })
+        })
+      })
+      function closemenu() {
+        $('#sidemenu').style.width = '0';
+      }
+    </script>
+<!-- JAVASCRIPT FOR THR MOONS HOVER EFFECT -->
+<script>
+   document.addEventListener("DOMContentLoaded", function(){
+     const Main02 = document.getElementById("Main02");
+     const Main01 = document.getElementById("Main01");
+
+      Main02.addEventListener("mouseenter", function() {
+        Main01.style.opacity = '1';
+        Main02.style.opacity = '0';
+      });
+
+      Main02.addEventListener("mouseleave", function() {
+        Main01.style.opacity = '0';
+        Main02.style.opacity = '1';
+      });
+    });
+</script>
+
+</body>
+</html>
